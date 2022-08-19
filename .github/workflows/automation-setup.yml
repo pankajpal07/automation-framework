@@ -1,0 +1,25 @@
+# This workflow will build a this automation-platform project with Maven, and cache/restore any dependencies to improve the workflow execution time
+
+name: Automation framework with Java
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setting up Java
+      uses: actions/setup-java@v3
+      with:
+        java-version: '11'
+        distribution: 'temurin'
+        cache: maven
+    - name: Executing Testcases
+      run: mvn clean install -f pom.xml

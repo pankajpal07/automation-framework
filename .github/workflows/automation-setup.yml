@@ -24,9 +24,9 @@ jobs:
     - name: Executing Testcases
       run: mvn clean install -f pom.xml
     - name: Saving results
-          if: always()
-          uses: actions/upload-artifact@v3
-          with:
-              name: test-result
-              path: |
-                automation-framework/test-result
+      if: always()
+      uses: actions/upload-artifact@v3
+      with:
+          name: test-result
+          path: |
+            automation-framework/test-result

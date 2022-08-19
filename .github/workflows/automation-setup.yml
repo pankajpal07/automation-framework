@@ -29,4 +29,4 @@ jobs:
       with:
           name: test-result
           path: |
-            automation-framework/test-result
+            test-result

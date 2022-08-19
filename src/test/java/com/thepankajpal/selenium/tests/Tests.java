@@ -16,7 +16,6 @@ public class Tests {
 		
 		Response response = EmployeeService.getPostsList();
 		softAssertion.assertEquals(response.statusCode(), 200);
-		softAssertion.assertTrue(false);
 		
 		softAssertion.assertAll();
 		iTestContext.setAttribute("assertion", softAssertion);

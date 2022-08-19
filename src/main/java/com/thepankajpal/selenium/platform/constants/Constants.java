@@ -1,7 +1,8 @@
 package com.thepankajpal.selenium.platform.constants;
 
 import java.io.File;
-import java.time.LocalDateTime;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -28,7 +29,7 @@ public class Constants {
     public static final String DOLLAR = "$";
     public static final String API_BASE_URL = PropertiesMap.getProperty("api.base.url");
     public static final String TEST_RESULT_DIRECTORY_PATH = System.getProperty(USER_DIR) + File.separatorChar + "test-result";
-    public static final String CURRENT_DAY_EXECUTION_REPORT = TEST_RESULT_DIRECTORY_PATH  + File.separator + LocalDateTime.now();
+    public static final String CURRENT_DAY_EXECUTION_REPORT = TEST_RESULT_DIRECTORY_PATH  + File.separator + new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss").format(new Date());
     
     public static final String REPORTS_PATH = CURRENT_DAY_EXECUTION_REPORT + File.separatorChar + "reports" + File.separatorChar;
     public static final String EXTENT_REPORT_HTML = CURRENT_DAY_EXECUTION_REPORT + File.separatorChar + "reports" + File.separatorChar + "execution-report.html";

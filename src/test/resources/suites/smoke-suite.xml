@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="fork-api-smoke-suite" verbose="8">
+	<listeners>
+		<listener class-name="com.thepankajpal.selenium.platform.listener.Listener" />
+	</listeners>
+
+	<test name="Dummy Test">
+		<classes>
+			<class name="com.thepankajpal.selenium.tests.Tests" />
+		</classes>
+	</test>
+</suite>

@@ -6,7 +6,7 @@ import com.thepankajpal.selenium.service.rest.RestClient;
 
 import io.restassured.response.Response;
 
-public class EmployeeService {
+public class PostsService {
 
 	public static Response getPostsList() {
 		

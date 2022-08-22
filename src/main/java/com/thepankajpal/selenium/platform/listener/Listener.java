@@ -206,7 +206,6 @@ public class Listener extends TestListenerAdapter implements IReporter, IExecuti
     	execution.setTotalValidationPoints(softAssertion.getValidationCount());
     	execution.setFailedValidationPoints(softAssertion.getFailedValidationCount());
     	execution.setPassedValidationPoints(softAssertion.getPassedValidationCount());
-    	execution.setBrowser("API");
     	Constants.executionMap.put(testcaseName, execution);
     }
     

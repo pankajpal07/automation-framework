@@ -16,6 +16,7 @@ public class Runner {
 	
 	private static final Logger LOGGER = LoggerFactory.getLogger(Runner.class);
 	
+	// Currently, it is not used as the test-cases are executed via suite.xml
 	public static void runSuite(List<String> suiteXmls) {
         try {
         	int suiteThreadSize = suiteXmls.size();

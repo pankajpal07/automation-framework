@@ -5,9 +5,15 @@
 		<listener class-name="com.thepankajpal.selenium.platform.listener.Listener" />
 	</listeners>
 
-	<test name="Dummy Test">
+	<test name="API Test">
 		<classes>
-			<class name="com.thepankajpal.selenium.tests.Tests" />
+			<class name="com.thepankajpal.selenium.tests.APITests" />
+		</classes>
+	</test>
+	<test name="UI Test">
+		<classes>
+			<class name="com.thepankajpal.selenium.platform.listener.AnnotationImplementation" />
+			<class name="com.thepankajpal.selenium.tests.UITests" />
 		</classes>
 	</test>
 </suite>

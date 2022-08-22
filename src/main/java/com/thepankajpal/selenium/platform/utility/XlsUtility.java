@@ -56,7 +56,7 @@ public class XlsUtility {
 
 		Object[] detailHeaderNames = { 
 				"Module Name", "Flow Name", "Test Case Name", "Test Case ID", "Number Of Valdation Points", "Passed Valdation Points",
-				"Failed Valdation Points", "Execution Time", "Status", "Platform", "Browser", "Priority", "Error Log", "Failure Category"
+				"Failed Valdation Points", "Execution Time", "Status", "Error Log", "Failure Category"
 		};
 
 		String lastClassName = null;
@@ -104,15 +104,9 @@ public class XlsUtility {
 			createCell(row, 7, cellColorStyle, execution.getFailedValidationPoints());
 			createCell(row, 8, cellColorStyle, execution.getExecutionTime());
 			createCell(row, 9, cellColorStyle, testCaseStatus);
-			String os = execution.getOs();
-			createCell(row, 10, cellColorStyle, os);
 
-			if (!execution.getBrowser().isEmpty()) {
-				createCell(row, 11, cellColorStyle, execution.getBrowser() + "-" + execution.getBrowserVersion());
-			}
-			createCell(row, 12, cellColorStyle, execution.getPriority());
-			createCell(row, 13, cellNonWrapColorStyle, execution.getFailureDetails());
-			createCell(row, 14, cellColorStyle, BLANK);
+			createCell(row, 10, cellNonWrapColorStyle, execution.getFailureDetails());
+			createCell(row, 11, cellColorStyle, BLANK);
 
 			moduleMetric.setTestCaseCount(moduleMetric.getTestCaseCount() + 1);
 			moduleMetric
